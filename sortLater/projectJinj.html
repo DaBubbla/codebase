@@ -1,0 +1,76 @@
+
+
+ {% if i['signal'] == "BUST" %}
+                <tr class='bg-black'>
+                    <td class="rows">{{ i['date'] }}</td>
+                    <td class="rows">{{ i['open'] | usd }}</td>
+                    <td class="rows">{{ i['high'] | usd }}</td>
+                    <td class="rows">{{ i['low'] | usd }}</td>
+                    <td class="rows">{{ i['close'] | usd }}</td>
+                    <td class="rows">{{ i['signal'] }}</td>
+                </tr>
+                {% elif i['signal'] == "BUY_SIGNAL" %}
+                    <tr class='table-success'>
+                    <td class="rows">{{ i['date'] }}</td>
+                    <td class="rows">{{ i['open'] | usd }}</td>
+                    <td class="rows">{{ i['high'] | usd }}</td>
+                    <td class="rows">{{ i['low'] | usd }}</td>
+                    <td class="rows">{{ i['close'] | usd }}</td>
+                    <td class="rows">{{ i['signal'] }}</td>
+                </tr>
+                {% elif i['signal'] == "BUY_PERF" %}
+                    <tr class='bg-success'>
+                    <td class="rows">{{ i['date'] }}</td>
+                    <td class="rows">{{ i['open'] | usd }}</td>
+                    <td class="rows">{{ i['high'] | usd }}</td>
+                    <td class="rows">{{ i['low'] | usd }}</td>
+                    <td class="rows">{{ i['close'] | usd }}</td>
+                    <td class="rows">{{ i['signal'] }}</td>
+                </tr>
+                {% elif i['signal'] == "SELL_SIGNAL" %}
+                    <tr class='table-success'>
+                    <td class="rows">{{ i['date'] }}</td>
+                    <td class="rows">{{ i['open'] | usd }}</td>
+                    <td class="rows">{{ i['high'] | usd }}</td>
+                    <td class="rows">{{ i['low'] | usd }}</td>
+                    <td class="rows">{{ i['close'] | usd }}</td>
+                    <td class="rows">{{ i['signal'] }}</td>
+                </tr>
+                {% elif i['signal'] == "SELL_PERF" %}
+                    <tr class='bg-danger'>
+                        <td class="rows">{{ i['date'] }}</td>
+                        <td class="rows">{{ i['open'] | usd }}</td>
+                        <td class="rows">{{ i['high'] | usd }}</td>
+                        <td class="rows">{{ i['low'] | usd }}</td>
+                        <td class="rows">{{ i['close'] | usd }}</td>
+                        <td class="rows">{{ i['signal'] }}</td>
+                    </tr>
+                {% elif i['signal'] == "BULL" %}
+                    <tr class='bg-warning'>
+                        <td class="rows">{{ i['date'] }}</td>
+                        <td class="rows">{{ i['open'] | usd }}</td>
+                        <td class="rows">{{ i['high'] | usd }}</td>
+                        <td class="rows">{{ i['low'] | usd }}</td>
+                        <td class="rows">{{ i['close'] | usd }}</td>
+                        <td class="rows">{{ i['signal'] }}</td>
+                    </tr>
+                {% elif i['signal'] == "BEAR" %}
+                    <tr class='bg-warning'>
+                        <td class="rows">{{ i['date'] }}</td>
+                        <td class="rows">{{ i['open'] | usd }}</td>
+                        <td class="rows">{{ i['high'] | usd }}</td>
+                        <td class="rows">{{ i['low'] | usd }}</td>
+                        <td class="rows">{{ i['close'] | usd }}</td>
+                        <td class="rows">{{ i['signal'] }}</td>
+                    </tr>
+                {% else %}
+                    <tr>
+                    <td class="rows">{{ i['date'] }}</td>
+                    <td class="rows">{{ i['open'] | usd }}</td>
+                    <td class="rows">{{ i['high'] | usd }}</td>
+                    <td class="rows">{{ i['low'] | usd }}</td>
+                    <td class="rows">{{ i['close'] | usd }}</td>
+                    <td class="rows">{{ i['signal'] }}</td>
+                </tr>
+
+                {% endif %}
